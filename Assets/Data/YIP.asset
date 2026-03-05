@@ -17,4 +17,4 @@ MonoBehaviour:
     OBO BO OBO OBOBOBO BO OBO
   ChoiceData:
   - Choice: blo!
-    ThumbnailData: {fileID: 11400000, guid: e4cd12c31916b674b94ccc9abfceb096, type: 2}
+    LinkedThumbnail: {fileID: 11400000, guid: e4cd12c31916b674b94ccc9abfceb096, type: 2}

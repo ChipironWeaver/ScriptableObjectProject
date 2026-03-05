@@ -17,4 +17,4 @@ MonoBehaviour:
     blboblob b obbobl blbobl bbloob oblo
   ChoiceData:
   - Choice: blo?
-    ThumbnailData: {fileID: 11400000, guid: c6fdf1d088706c14eb5faeab9e09ba8b, type: 2}
+    LinkedThumbnail: {fileID: 11400000, guid: c6fdf1d088706c14eb5faeab9e09ba8b, type: 2}

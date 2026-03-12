@@ -15,7 +15,7 @@ public class ThumbnailController : MonoBehaviour
         DisplayThumbnail(_firstThumbnail);
     }
     
-    private void DisplayThumbnail(ThumbnailData data)
+    private void DisplayThumbnail(ThumbnailData data, ItemData item = null)
     {
         _thumbnail.sprite = data.ThumbnailImage;
         _description.text = data.Description;
@@ -25,15 +25,20 @@ public class ThumbnailController : MonoBehaviour
             Destroy(child.gameObject);
         }
         
+        if (item != null) ItemController.Instance.items.Add(item);
         
         foreach (ChoiceData choiceData in data.ChoiceData)
         {
             GameObject instantiated = Instantiate(_buttonPrefab, _choicePanelTransform);
             instantiated.GetComponentInChildren<TextMeshProUGUI>().text = choiceData.Choice;
-            instantiated.GetComponent<Button>().onClick.AddListener((() =>
+            instantiated.GetComponent<Button>().onClick.AddListener(() =>
             {
-                DisplayThumbnail(choiceData.LinkedThumbnail);
-            }));
+                DisplayThumbnail(choiceData.LinkedThumbnail, choiceData.ItemReward);
+            });
+            if (choiceData.RequiredItem != null)
+            {
+                instantiated.GetComponent<Button>().interactable = ItemController.Instance.CheckIfItemExists(choiceData.RequiredItem);
+            }
         }
     }
 }

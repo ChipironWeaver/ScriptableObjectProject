@@ -16,5 +16,11 @@ MonoBehaviour:
   Description: blob blobl blob lboobl lbobl lbobl lbobl blobl blbobl blbolb bobblbo 
     blboblob b obbobl blbobl bbloob oblo
   ChoiceData:
-  - Choice: blo?
+  - Choice: Be Mean
     LinkedThumbnail: {fileID: 11400000, guid: c6fdf1d088706c14eb5faeab9e09ba8b, type: 2}
+    ItemReward: {fileID: 0}
+    RequiredItem: {fileID: 0}
+  - Choice: Be Nice
+    LinkedThumbnail: {fileID: 11400000, guid: c6fdf1d088706c14eb5faeab9e09ba8b, type: 2}
+    ItemReward: {fileID: 11400000, guid: 7695d1220ee4c084cbb12e3948c2f379, type: 2}
+    RequiredItem: {fileID: 0}

@@ -658,6 +658,7 @@ GameObject:
   - component: {fileID: 1060932136}
   - component: {fileID: 1060932135}
   - component: {fileID: 1060932137}
+  - component: {fileID: 1060932138}
   m_Layer: 5
   m_Name: MainPanel
   m_TagString: Untagged
@@ -740,6 +741,19 @@ MonoBehaviour:
   _choicePanelTransform: {fileID: 1249848971}
   _thumbnail: {fileID: 561248843}
   _description: {fileID: 1043739588}
+--- !u!114 &1060932138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060932133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5a5318f3ff70d44b0c48a519f8a498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemController
+  items: []
 --- !u!1 &1235274178
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,7 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

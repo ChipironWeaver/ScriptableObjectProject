@@ -10,17 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: YIP
+  m_Name: Happy End
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: -557200026, guid: 447f62a0f89710740a09a715ad6bc584, type: 3}
-  Description: LBBLOBLBOBLB OBLBOBBLBLBOBL OBLOLB LBOLB OBL BOBLBOBL BO LBO BOBO
-    OBO BO OBO OBOBOBO BO OBO
+  ThumbnailImage: {fileID: 335081866, guid: c16ef83ab1fae8c45b5f12c428b1dfe9, type: 3}
+  Description: wooohooo you made the jelly fish happy
   ChoiceData:
-  - Choice: blo!
+  - Choice: WOOHOOOOO
     LinkedThumbnail: {fileID: 11400000, guid: e4cd12c31916b674b94ccc9abfceb096, type: 2}
     ItemReward: {fileID: 0}
     RequiredItem: {fileID: 0}
-  - Choice: Be nice again
-    LinkedThumbnail: {fileID: 11400000, guid: 4746d4b483090234aa7f31b388a9b9a7, type: 2}
-    ItemReward: {fileID: 0}
-    RequiredItem: {fileID: 11400000, guid: 7695d1220ee4c084cbb12e3948c2f379, type: 2}

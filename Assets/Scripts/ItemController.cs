@@ -6,7 +6,6 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {
     public List<ItemData> items =  new List<ItemData>();
-    public static ItemController Instance { get; private set; }
     
     public delegate void OnInventoryUpdate();
     public static event OnInventoryUpdate onInventoryUpdate;
@@ -14,10 +13,15 @@ public class ItemController : MonoBehaviour
     public delegate void OnItemReward(ItemData item);
     public static event OnItemReward onItemReward;
     
-    
+    public static ItemController Instance { get; private set; }
     
     private void Awake()
     {
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(Instance);
+        }
         Instance = this;
     }
     
@@ -31,9 +35,9 @@ public class ItemController : MonoBehaviour
         if (!items.Contains(item))
         {
             items.Add(item);
+            onInventoryUpdate?.Invoke();
+            onItemReward?.Invoke(item);
         }
-        onInventoryUpdate?.Invoke();
-        onItemReward?.Invoke(item);
     }
 
     public void RemoveItem(ItemData item)
@@ -41,7 +45,7 @@ public class ItemController : MonoBehaviour
         if (items.Contains(item))
         {
             items.Remove(item);
+            onInventoryUpdate?.Invoke();
         }
-        onInventoryUpdate?.Invoke();
     }
 }

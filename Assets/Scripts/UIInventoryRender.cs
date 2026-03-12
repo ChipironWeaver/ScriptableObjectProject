@@ -2,7 +2,7 @@ using UnityEngine;
 using  UnityEngine.UI;
 public class UIInventoryRender : MonoBehaviour
 {
-    [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private GameObject _itemPrefab;
     
     void OnEnable()
     {
@@ -20,7 +20,6 @@ public class UIInventoryRender : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-
         foreach (ItemData item in ItemController.Instance.items)
         {
             InstantiateItems(item);
@@ -29,7 +28,8 @@ public class UIInventoryRender : MonoBehaviour
 
     private void InstantiateItems(ItemData item)
     {
-        GameObject instantiate = Instantiate(itemPrefab, transform);
+        GameObject instantiate = Instantiate(_itemPrefab, transform);
         instantiate.GetComponent<Image>().sprite = item.icon;
     }
+    
 }

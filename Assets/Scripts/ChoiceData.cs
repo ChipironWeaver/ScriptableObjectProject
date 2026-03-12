@@ -7,4 +7,5 @@ public struct ChoiceData
     public ThumbnailData LinkedThumbnail;
     public ItemData ItemReward;
     public ItemData RequiredItem;
+    public bool ConsumerItem;
 }

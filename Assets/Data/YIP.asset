@@ -20,7 +20,9 @@ MonoBehaviour:
     LinkedThumbnail: {fileID: 11400000, guid: e4cd12c31916b674b94ccc9abfceb096, type: 2}
     ItemReward: {fileID: 0}
     RequiredItem: {fileID: 0}
+    ConsumerItem: 0
   - Choice: Be nice again
     LinkedThumbnail: {fileID: 11400000, guid: 4746d4b483090234aa7f31b388a9b9a7, type: 2}
-    ItemReward: {fileID: 0}
+    ItemReward: {fileID: 11400000, guid: 5aa79d7652cde014a9298c66631b804a, type: 2}
     RequiredItem: {fileID: 11400000, guid: 7695d1220ee4c084cbb12e3948c2f379, type: 2}
+    ConsumerItem: 0

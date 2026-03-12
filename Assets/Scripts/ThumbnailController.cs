@@ -12,10 +12,10 @@ public class ThumbnailController : MonoBehaviour
 
     private void Start()
     {
-        DisplayThumbnail(_firstThumbnail);
+        DisplayThumbnail(_firstThumbnail, new ChoiceData());
     }
     
-    private void DisplayThumbnail(ThumbnailData data, ItemData item = null)
+    private void DisplayThumbnail(ThumbnailData data, ChoiceData choice)
     {
         _thumbnail.sprite = data.ThumbnailImage;
         _description.text = data.Description;
@@ -24,8 +24,10 @@ public class ThumbnailController : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        
-        if (item != null) ItemController.Instance.items.Add(item);
+
+        if (choice.ItemReward != null) ItemController.Instance.AddItem(choice.ItemReward);
+            
+        if (choice.RequiredItem !=null && choice.ConsumerItem) ItemController.Instance.RemoveItem(choice.RequiredItem) ;
         
         foreach (ChoiceData choiceData in data.ChoiceData)
         {
@@ -33,7 +35,7 @@ public class ThumbnailController : MonoBehaviour
             instantiated.GetComponentInChildren<TextMeshProUGUI>().text = choiceData.Choice;
             instantiated.GetComponent<Button>().onClick.AddListener(() =>
             {
-                DisplayThumbnail(choiceData.LinkedThumbnail, choiceData.ItemReward);
+                DisplayThumbnail(choiceData.LinkedThumbnail, choiceData);
             });
             if (choiceData.RequiredItem != null)
             {

@@ -18,9 +18,11 @@ MonoBehaviour:
   ChoiceData:
   - Choice: Be Mean
     LinkedThumbnail: {fileID: 11400000, guid: c6fdf1d088706c14eb5faeab9e09ba8b, type: 2}
-    ItemReward: {fileID: 0}
+    ItemReward: {fileID: 11400000, guid: 3dd1895226abb9847bc0c32b653589bf, type: 2}
     RequiredItem: {fileID: 0}
+    ConsumerItem: 0
   - Choice: Be Nice
     LinkedThumbnail: {fileID: 11400000, guid: c6fdf1d088706c14eb5faeab9e09ba8b, type: 2}
     ItemReward: {fileID: 11400000, guid: 7695d1220ee4c084cbb12e3948c2f379, type: 2}
     RequiredItem: {fileID: 0}
+    ConsumerItem: 0

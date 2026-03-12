@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3092bc74f250d0f4d94fff85a802fad6, type: 3}
   m_Name: Beef
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  icon: {fileID: 0}
+  icon: {fileID: 1446380958, guid: 72257d89386b3414e906b46e98ad08c4, type: 3}
   itemName: Beef
   itemDescription: A nice piece of beef

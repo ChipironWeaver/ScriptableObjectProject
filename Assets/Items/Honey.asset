@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3092bc74f250d0f4d94fff85a802fad6, type: 3}
   m_Name: Honey
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  icon: {fileID: 0}
+  icon: {fileID: 1084771682, guid: 6ffca146b797a804c90420e55f886d1e, type: 3}
   itemName: Honey
   itemDescription: some sweet honey

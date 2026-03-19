@@ -56,7 +56,7 @@ public class ThumbnailController : MonoBehaviour
                 bool hasItem = ItemController.Instance.CheckIfItemExists(item.Item);
                 if (item.Special == ItemBehaviour.SpecialBehaviour.BlockChoice) hasItem = !hasItem;
                 
-                if (item.Special == ItemBehaviour.SpecialBehaviour.HideChoice)
+                if (item.Special == ItemBehaviour.SpecialBehaviour.HideChoice && !hasItem)
                 {
                     Destroy(instantiated);
                 }
@@ -64,6 +64,7 @@ public class ThumbnailController : MonoBehaviour
                 else
                 {
                     instantiated.GetComponent<Button>().interactable = hasItem;
+                    break;
                 }
             }
         }

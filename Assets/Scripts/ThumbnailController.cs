@@ -25,21 +25,46 @@ public class ThumbnailController : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        if (choice.ItemReward != null) ItemController.Instance.AddItem(choice.ItemReward);
-            
-        if (choice.RequiredItem !=null && choice.ConsumerItem) ItemController.Instance.RemoveItem(choice.RequiredItem) ;
+        if (choice.ItemReward != null)
+        {
+            foreach (ItemData item in choice.ItemReward)
+            {
+                ItemController.Instance.AddItem(item);
+            }
+        }
+
+        if (choice.RequiredItem != null)
+        {
+            foreach (ItemBehaviour item in choice.RequiredItem)
+            {
+                if (item.Special == ItemBehaviour.SpecialBehaviour.ConsumeItem)
+                {
+                    ItemController.Instance.RemoveItem(item.Item);
+                }
+            }  
+        } 
         
         foreach (ChoiceData choiceData in data.ChoiceData)
         {
             GameObject instantiated = Instantiate(_buttonPrefab, _choicePanelTransform);
+            
             instantiated.GetComponentInChildren<TextMeshProUGUI>().text = choiceData.Choice;
-            instantiated.GetComponent<Button>().onClick.AddListener(() =>
+            instantiated.GetComponent<Button>().onClick.AddListener(() => { DisplayThumbnail(choiceData.LinkedThumbnail, choiceData); });
+            
+            foreach (ItemBehaviour item in choiceData.RequiredItem)
             {
-                DisplayThumbnail(choiceData.LinkedThumbnail, choiceData);
-            });
-            if (choiceData.RequiredItem != null)
-            {
-                instantiated.GetComponent<Button>().interactable = ItemController.Instance.CheckIfItemExists(choiceData.RequiredItem);
+                bool hasItem = ItemController.Instance.CheckIfItemExists(item.Item);
+                if (item.Special == ItemBehaviour.SpecialBehaviour.BlockChoice) hasItem = !hasItem;
+                
+                if (item.Special == ItemBehaviour.SpecialBehaviour.HideChoice)
+                {
+                    Destroy(instantiated);
+                }
+                
+                else
+                {
+                    instantiated.GetComponent<Button>().interactable = hasItem;
+                }
             }
         }
     }

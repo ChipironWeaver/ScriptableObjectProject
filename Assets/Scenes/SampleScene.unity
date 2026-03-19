@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c56d78fa3157104b9564b338f9a6748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _firstThumbnail: {fileID: 11400000, guid: e4cd12c31916b674b94ccc9abfceb096, type: 2}
+  _firstThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
   _buttonPrefab: {fileID: 937419447094765274, guid: 672c8411c5b99b44d87ac1539da9a1f7, type: 3}
   _choicePanelTransform: {fileID: 1249848971}
   _thumbnail: {fileID: 561248843}
@@ -1046,12 +1046,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272059236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 513e1f765e239a84596340af70bfc2ae, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  currentColor: 5
+  m_EditorClassIdentifier: Assembly-CSharp::Ex5Bis
+  currentColor: 0
 --- !u!1 &1440906600
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class Ex5Bis : MonoBehaviour
     [Flags]
     public enum Color
     {
-        Red = 1,
+        Red = 1 ,
         Green = 2,
         Blue = 4,
     }
@@ -16,10 +16,10 @@ public class Ex5Bis : MonoBehaviour
     {
         switch (currentColor)
         {
-            case  Color.Red | Color.Blue | Color.Green:
+            case Color.Red | Color.Green | Color.Blue:
                 Debug.Log("White");
                 break;
-            case  Color.Red| Color.Green:
+            case  Color.Red | Color.Green:
                 Debug.Log("Yellow");
                 break;
             case  Color.Blue | Color.Green:

@@ -9,7 +9,11 @@ public class ThumbnailController : MonoBehaviour
     [SerializeField] private Transform _choicePanelTransform;
     [SerializeField] private Image _thumbnail;
     [SerializeField] private TextMeshProUGUI _description;
+    [SerializeField] private TextMeshProUGUI _reputationText;
+    [SerializeField] private Vector2 _reputationTextColorRange;
+    [SerializeField] private Gradient _reputationGradient;
 
+    public int reputation;
     private void Start()
     {
         DisplayThumbnail(_firstThumbnail, new ChoiceData());
@@ -19,7 +23,10 @@ public class ThumbnailController : MonoBehaviour
     {
         _thumbnail.sprite = data.ThumbnailImage;
         _description.text = data.Description;
-
+        
+        reputation += choice.ReputationReward;
+        UpdateReputationText();
+            
         foreach (Transform child in _choicePanelTransform)
         {
             Destroy(child.gameObject);
@@ -49,7 +56,7 @@ public class ThumbnailController : MonoBehaviour
             GameObject instantiated = Instantiate(_buttonPrefab, _choicePanelTransform);
             
             instantiated.GetComponentInChildren<TextMeshProUGUI>().text = choiceData.Choice;
-            instantiated.GetComponent<Button>().onClick.AddListener(() => { DisplayThumbnail(choiceData.LinkedThumbnail, choiceData); });
+            instantiated.GetComponent<Button>().onClick.AddListener(() => { FindThumbnail(choiceData); });
             
             foreach (ItemBehaviour item in choiceData.RequiredItem)
             {
@@ -68,5 +75,29 @@ public class ThumbnailController : MonoBehaviour
                 }
             }
         }
+    }
+    
+    private void FindThumbnail(ChoiceData choiceData)
+    {
+        ThumbnailData data = choiceData.LinkedThumbnail;
+        switch (choiceData.Condition)
+        {
+            case(ConditionalSecondThumbnail.HigherReputation):
+                if (reputation <= choiceData.ReputationRequirement) data = choiceData.SecondLinkedThumbnail;
+                break;
+            case(ConditionalSecondThumbnail.LowerReputation):
+                if (reputation >= choiceData.ReputationRequirement) data = choiceData.SecondLinkedThumbnail;
+                break;
+            case(ConditionalSecondThumbnail.Random):
+                if (choiceData.RandomOdd < Random.Range(0, 100)) data = choiceData.SecondLinkedThumbnail;
+                break;
+        }
+        DisplayThumbnail(data, choiceData);
+    }
+    
+    private void UpdateReputationText()
+    {
+        _reputationText.text = reputation.ToString();
+        _reputationText.color = _reputationGradient.Evaluate(Mathf.Clamp((reputation - _reputationTextColorRange.x)/(-_reputationTextColorRange.x + _reputationTextColorRange.y) , 0, 1));
     }
 }

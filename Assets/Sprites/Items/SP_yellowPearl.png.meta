@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7fbeed4158cfec4187f3aa4defc7b7c
+guid: 5b56d12d95082f643adadf12eae4999f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: itemsTEST_0
+      name: SP_yellowPearl_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 56
-        width: 64
-        height: 64
+        y: 0
+        width: 239
+        height: 239
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,74 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d04d35fdde6532b4b82aa0bebf682a2b
-      internalID: 763287816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itemsTEST_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 56
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dc6262a16dcf4044a3ac6eb688da946
-      internalID: 1487246187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itemsTEST_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 56
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 910e96343647a5e4d8e7f5aa726b697b
-      internalID: 1560422176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itemsTEST_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 56
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b168db883cd61744bae539cbaf0b25b
-      internalID: 1928722476
+      spriteID: 6ded3f3f6f4e1b44da2648848720b277
+      internalID: -1108874599
       vertices: []
       indices: 
       edges: []
@@ -188,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f44680167fe19347aab9c22f06092d9
+    spriteID: c0da746812a2f92469ed16c9d58e2130
     internalID: 0
     vertices: []
     indices: 
@@ -197,15 +131,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      itemsTEST_0: 763287816
-      itemsTEST_1: 1487246187
-      itemsTEST_2: 1560422176
-      itemsTEST_3: 1928722476
+      SP_yellowPearl_0: -1108874599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

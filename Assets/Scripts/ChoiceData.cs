@@ -8,7 +8,6 @@ public struct ChoiceData
     public string Choice;
     public ThumbnailData LinkedThumbnail;
     public ThumbnailData SecondLinkedThumbnail;
-    public List<ItemData> ItemReward;
     public int ReputationReward;
     public List<ItemBehaviour> RequiredItem;
     public SpecialBehaviour Behavior ;
@@ -29,5 +28,6 @@ public enum SpecialBehaviour
     HideChoice = 2,
     ReputationRequirement = 8,
     Random = 16,
+    OneItemRequirement = 32,
 }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class ThumbnailController : MonoBehaviour
     [SerializeField] private Vector2 _reputationTextColorRange;
     [SerializeField] private Gradient _reputationGradient;
 
+
     public int reputation;
     private void Start()
     {
@@ -25,33 +27,28 @@ public class ThumbnailController : MonoBehaviour
     {
         _thumbnail.sprite = data.ThumbnailImage;
         _description.text = data.Description;
-        
         reputation += choice.ReputationReward;
         UpdateReputationText();
             
+        if(choice.RequiredItem != null) foreach (ItemBehaviour item in choice.RequiredItem)
+        {
+            if (choice.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement) && ItemController.Instance.CheckIfItemExists(item.Item) && item.Consumable)
+            {
+                ItemController.Instance.RemoveItem(item.Item);
+                break;
+            }
+        }
+        if (!choice.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement) && choice.RequiredItem != null)
+        {
+            foreach (ItemBehaviour item in choice.RequiredItem) if(item.Consumable) ItemController.Instance.RemoveItem(item.Item);
+        }
+        
         foreach (Transform child in _choicePanelTransform)
         {
             Destroy(child.gameObject);
         }
 
-        if (choice.ItemReward != null)
-        {
-            foreach (ItemData item in choice.ItemReward)
-            {
-                ItemController.Instance.AddItem(item);
-            }
-        }
-
-        if (choice.RequiredItem != null)
-        {
-            foreach (ItemBehaviour item in choice.RequiredItem)
-            {
-                if (item.Consumable)
-                {
-                    ItemController.Instance.RemoveItem(item.Item);
-                }
-            }  
-        } 
+        foreach (ItemData item in data.ItemRewards) ItemController.Instance.AddItem(item);
         
         foreach (ChoiceData choiceData in data.ChoiceData)
         {
@@ -64,10 +61,14 @@ public class ThumbnailController : MonoBehaviour
             
             foreach (ItemBehaviour item in choiceData.RequiredItem)
             {
+                if (choiceData.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement) && ItemController.Instance.CheckIfItemExists(item.Item))
+                {
+                    displayChoice = true;
+                    break;
+                }
                 if (!ItemController.Instance.CheckIfItemExists(item.Item)) displayChoice = false;
-                
             }
-  
+            
             if (choiceData.Behavior.HasFlag(SpecialBehaviour.ReputationRequirement) && reputation < choiceData.ReputationRequirement) displayChoice = false;
             
             if (choiceData.Behavior.HasFlag(SpecialBehaviour.BlockChoice)) displayChoice = !displayChoice;

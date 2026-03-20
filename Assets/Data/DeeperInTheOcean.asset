@@ -10,25 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: Starting
+  m_Name: DeeperInTheOcean
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: You are a lonely jelly fish just swiming into the ocean, you find
-    two ways to go
+  Description: You find yourself in a cave, you see a clam, do you want to try to
+    open it?
   ChoiceData:
-  - Choice: Go deeper into the ocean
-    LinkedThumbnail: {fileID: 11400000, guid: e93be2ac3626c8741913f29c5d8942bb, type: 2}
+  - Choice: Try to open the clam
+    LinkedThumbnail: {fileID: 11400000, guid: dccc56cec8cab404c8320545404aa2dc, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
-    ItemReward: []
+    ItemReward:
+    - {fileID: 11400000, guid: d9ddf9a8814e86449b3a32737b2390aa, type: 2}
     ReputationReward: 0
     RequiredItem: []
     Behavior: 0
     RandomOdd: 0
     ReputationRequirement: 0
-  - Choice: Continue on the surface
-    LinkedThumbnail: {fileID: 11400000, guid: 9905ace9fc1879e45bcf088791a8cb14, type: 2}
+  - Choice: Continue into the cave
+    LinkedThumbnail: {fileID: 11400000, guid: dab42ee502674ed478ce1a050e08d164, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
-    ItemReward: []
+    ItemReward:
+    - {fileID: 11400000, guid: d9ddf9a8814e86449b3a32737b2390aa, type: 2}
     ReputationReward: 0
     RequiredItem: []
     Behavior: 0

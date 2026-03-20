@@ -10,27 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: Starting
+  m_Name: give item
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: You are a lonely jelly fish just swiming into the ocean, you find
-    two ways to go
+  Description: 
   ChoiceData:
-  - Choice: Go deeper into the ocean
-    LinkedThumbnail: {fileID: 11400000, guid: e93be2ac3626c8741913f29c5d8942bb, type: 2}
+  - Choice: go bak
+    LinkedThumbnail: {fileID: 11400000, guid: 175b7af13d5b3ec4ca6a6de08e24ee35, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
-    ItemReward: []
     ReputationReward: 0
     RequiredItem: []
     Behavior: 0
     RandomOdd: 0
     ReputationRequirement: 0
-  - Choice: Continue on the surface
-    LinkedThumbnail: {fileID: 11400000, guid: 9905ace9fc1879e45bcf088791a8cb14, type: 2}
-    SecondLinkedThumbnail: {fileID: 0}
-    ItemReward: []
-    ReputationReward: 0
-    RequiredItem: []
-    Behavior: 0
-    RandomOdd: 0
-    ReputationRequirement: 0
+  ItemRewards:
+  - {fileID: 11400000, guid: 72b87f09128d03d428da7d72e52f9f54, type: 2}
+  - {fileID: 11400000, guid: 5e79f4693b833a04391cffb710330c22, type: 2}

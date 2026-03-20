@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3092bc74f250d0f4d94fff85a802fad6, type: 3}
-  m_Name: Item 1
+  m_Name: Yellow Pearl
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  icon: {fileID: 763287816, guid: b7fbeed4158cfec4187f3aa4defc7b7c, type: 3}
-  itemName: Item 1
-  itemDescription: wooohooo
+  icon: {fileID: 21300000, guid: 5b56d12d95082f643adadf12eae4999f, type: 3}
+  itemName: Yellow Pearl
+  itemDescription: 

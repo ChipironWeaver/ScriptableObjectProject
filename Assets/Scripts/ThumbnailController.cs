@@ -64,35 +64,17 @@ public class ThumbnailController : MonoBehaviour
             
             foreach (ItemBehaviour item in choiceData.RequiredItem)
             {
-                if (!ItemController.Instance.CheckIfItemExists(item.Item))
-                {
-                    displayChoice = false;
-                }
+                if (!ItemController.Instance.CheckIfItemExists(item.Item)) displayChoice = false;
+                
             }
   
-            if (choiceData.Behavior.HasFlag(SpecialBehaviour.ReputationRequirement) && reputation < choiceData.ReputationRequirement)
-            {
-                print("Reputation isn't good" +  choiceData.Choice);
-                displayChoice = false;
-            }
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.ReputationRequirement) && reputation < choiceData.ReputationRequirement) displayChoice = false;
             
-            print(choiceData.Behavior.HasFlag(SpecialBehaviour.BlockChoice));
-            if (choiceData.Behavior.HasFlag(SpecialBehaviour.BlockChoice))
-            {
-                print("Block" +  choiceData.Choice);
-                displayChoice = !displayChoice;
-            }
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.BlockChoice)) displayChoice = !displayChoice;
 
-            if (choiceData.Behavior.HasFlag(SpecialBehaviour.HideChoice) && !displayChoice)
-            {
-                print("HIDE" +  choiceData.Choice);
-                Destroy(instantiated);
-            }
-            else
-            {
-                print(  choiceData.Choice + " make uniteractable " +displayChoice);
-                instantiated.GetComponent<Button>().interactable = displayChoice;
-            }
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.HideChoice) && !displayChoice) Destroy(instantiated);
+            else instantiated.GetComponent<Button>().interactable = displayChoice;
+            
         }
     }
     

@@ -11,7 +11,7 @@ public struct ChoiceData
     public List<ItemData> ItemReward;
     public int ReputationReward;
     public List<ItemBehaviour> RequiredItem;
-    public ConditionalSecondThumbnail Condition ;
+    public SpecialBehaviour Behavior ;
     [Range(0,100)]public int RandomOdd;
     public int ReputationRequirement;
 }
@@ -19,21 +19,15 @@ public struct ChoiceData
 public struct ItemBehaviour
 {
     public ItemData Item;
-    public SpecialBehaviour Special;
-    [Flags]
-    public enum SpecialBehaviour
-    {
-        ConsumeItem = 1,
-        BlockChoice = 2,
-        HideChoice = 4,
-    }
+    public bool Consumable;
+    
 }
-
-public enum ConditionalSecondThumbnail
+[Flags]
+public enum SpecialBehaviour
 {
-    None,
-    LowerReputation,
-    HigherReputation,
-    Random
+    BlockChoice = 1,
+    HideChoice = 2,
+    ReputationRequirement = 8,
+    Random = 16,
 }
 

@@ -10,35 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: Starting
+  m_Name: Test_ReputationGiver
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 763287816, guid: b7fbeed4158cfec4187f3aa4defc7b7c, type: 3}
-  Description: Stating
+  ThumbnailImage: {fileID: 0}
+  Description: Reputation manage
   ChoiceData:
-  - Choice: +REP
-    LinkedThumbnail: {fileID: 11400000}
+  - Choice: Gaine Rep
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
     ItemReward: []
-    ReputationReward: 10
+    ReputationReward: 50
     RequiredItem: []
-    Behavior: 0
+    Condition: 0
     RandomOdd: 0
     ReputationRequirement: 0
-  - Choice: -REP
-    LinkedThumbnail: {fileID: 11400000}
+  - Choice: Loose Rep
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
     ItemReward: []
-    ReputationReward: -10
+    ReputationReward: -50
     RequiredItem: []
-    Behavior: 0
-    RandomOdd: 0
-    ReputationRequirement: 0
-  - Choice: Testing
-    LinkedThumbnail: {fileID: 11400000, guid: ba8684d6285be4645adffa13d82b7e7e, type: 2}
-    SecondLinkedThumbnail: {fileID: 0}
-    ItemReward: []
-    ReputationReward: 0
-    RequiredItem: []
-    Behavior: 0
+    Condition: 0
     RandomOdd: 0
     ReputationRequirement: 0

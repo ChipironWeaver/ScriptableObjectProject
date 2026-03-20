@@ -12,6 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
+  ThumbnailImage: {fileID: 1560422176, guid: b7fbeed4158cfec4187f3aa4defc7b7c, type: 3}
   Description: 
-  ChoiceData: []
+  ChoiceData:
+  - Choice: +rep show block
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ItemReward: []
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 8
+    RandomOdd: 0
+    ReputationRequirement: 25
+  - Choice: +rep show hide
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ItemReward: []
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 10
+    RandomOdd: 0
+    ReputationRequirement: 25
+  - Choice: -rep show block
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ItemReward: []
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 9
+    RandomOdd: 0
+    ReputationRequirement: 25
+  - Choice: -rep show hide
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ItemReward: []
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 9
+    RandomOdd: 0
+    ReputationRequirement: 25

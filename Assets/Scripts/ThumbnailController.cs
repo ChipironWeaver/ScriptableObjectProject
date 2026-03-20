@@ -1,6 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class ThumbnailController : MonoBehaviour
 {
@@ -44,7 +46,7 @@ public class ThumbnailController : MonoBehaviour
         {
             foreach (ItemBehaviour item in choice.RequiredItem)
             {
-                if (item.Special == ItemBehaviour.SpecialBehaviour.ConsumeItem)
+                if (item.Consumable)
                 {
                     ItemController.Instance.RemoveItem(item.Item);
                 }
@@ -53,6 +55,8 @@ public class ThumbnailController : MonoBehaviour
         
         foreach (ChoiceData choiceData in data.ChoiceData)
         {
+
+            bool displayChoice = true;
             GameObject instantiated = Instantiate(_buttonPrefab, _choicePanelTransform);
             
             instantiated.GetComponentInChildren<TextMeshProUGUI>().text = choiceData.Choice;
@@ -60,19 +64,34 @@ public class ThumbnailController : MonoBehaviour
             
             foreach (ItemBehaviour item in choiceData.RequiredItem)
             {
-                bool hasItem = ItemController.Instance.CheckIfItemExists(item.Item);
-                if (item.Special == ItemBehaviour.SpecialBehaviour.BlockChoice) hasItem = !hasItem;
-                
-                if (item.Special == ItemBehaviour.SpecialBehaviour.HideChoice && !hasItem)
+                if (!ItemController.Instance.CheckIfItemExists(item.Item))
                 {
-                    Destroy(instantiated);
+                    displayChoice = false;
                 }
-                
-                else
-                {
-                    instantiated.GetComponent<Button>().interactable = hasItem;
-                    break;
-                }
+            }
+  
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.ReputationRequirement) && reputation < choiceData.ReputationRequirement)
+            {
+                print("Reputation isn't good" +  choiceData.Choice);
+                displayChoice = false;
+            }
+            
+            print(choiceData.Behavior.HasFlag(SpecialBehaviour.BlockChoice));
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.BlockChoice))
+            {
+                print("Block" +  choiceData.Choice);
+                displayChoice = !displayChoice;
+            }
+
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.HideChoice) && !displayChoice)
+            {
+                print("HIDE" +  choiceData.Choice);
+                Destroy(instantiated);
+            }
+            else
+            {
+                print(  choiceData.Choice + " make uniteractable " +displayChoice);
+                instantiated.GetComponent<Button>().interactable = displayChoice;
             }
         }
     }
@@ -80,18 +99,9 @@ public class ThumbnailController : MonoBehaviour
     private void FindThumbnail(ChoiceData choiceData)
     {
         ThumbnailData data = choiceData.LinkedThumbnail;
-        switch (choiceData.Condition)
-        {
-            case(ConditionalSecondThumbnail.HigherReputation):
-                if (reputation <= choiceData.ReputationRequirement) data = choiceData.SecondLinkedThumbnail;
-                break;
-            case(ConditionalSecondThumbnail.LowerReputation):
-                if (reputation >= choiceData.ReputationRequirement) data = choiceData.SecondLinkedThumbnail;
-                break;
-            case(ConditionalSecondThumbnail.Random):
-                if (choiceData.RandomOdd < Random.Range(0, 100)) data = choiceData.SecondLinkedThumbnail;
-                break;
-        }
+                
+        if (choiceData.RandomOdd < Random.Range(0, 100) && choiceData.Behavior.HasFlag(SpecialBehaviour.Random)) data = choiceData.SecondLinkedThumbnail;
+        
         DisplayThumbnail(data, choiceData);
     }
     

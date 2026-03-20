@@ -48,4 +48,9 @@ public class ItemController : MonoBehaviour
             onInventoryUpdate?.Invoke();
         }
     }
+
+    public void ForceUpdate()
+    {
+        onInventoryUpdate?.Invoke();
+    }
 }

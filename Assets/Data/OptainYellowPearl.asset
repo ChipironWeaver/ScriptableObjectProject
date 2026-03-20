@@ -10,20 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: SeaWeedForest
+  m_Name: OptainYellowPearl
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: You are in a kelp forest you see something shiny do you wish to infestigate?
+  Description: You find a yellow pearl! you can continue exploring!
   ChoiceData:
-  - Choice: Investigate the shiny thing
-    LinkedThumbnail: {fileID: 11400000, guid: 9c350cf6a73d52e42860ace260c204a2, type: 2}
-    SecondLinkedThumbnail: {fileID: 0}
-    ReputationReward: 0
-    RequiredItem: []
-    Behavior: 0
-    RandomOdd: 0
-    ReputationRequirement: 0
-  - Choice: Ignore the shiny thing
+  - Choice: Go toward the flower kelp forest
     LinkedThumbnail: {fileID: 11400000, guid: a4215d9862387e1419b9e07ec870d3e7, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
     ReputationReward: 0
@@ -31,4 +23,5 @@ MonoBehaviour:
     Behavior: 0
     RandomOdd: 0
     ReputationRequirement: 0
-  ItemRewards: []
+  ItemRewards:
+  - {fileID: 11400000, guid: 5e79f4693b833a04391cffb710330c22, type: 2}

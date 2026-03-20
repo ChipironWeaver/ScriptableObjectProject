@@ -13,6 +13,32 @@ MonoBehaviour:
   m_Name: CoralForest
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: 
-  ChoiceData: []
+  Description: You are in a nice coral forest, where do you want to go next?
+  ChoiceData:
+  - Choice: Do you want to take the coral reed
+    LinkedThumbnail: {fileID: 11400000, guid: 8dbff4e8ce301604f96581caf2ecdfaa, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem:
+    - Item: {fileID: 11400000, guid: 9e62929316715434fba50581003625be, type: 2}
+      Consumable: 0
+    Behavior: 3
+    RandomOdd: 0
+    ReputationRequirement: 0
+  - Choice: 'Go towards the flowering kelp forest '
+    LinkedThumbnail: {fileID: 11400000, guid: a4215d9862387e1419b9e07ec870d3e7, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 0
+    RandomOdd: 0
+    ReputationRequirement: 0
+  - Choice: 'Go towards a village '
+    LinkedThumbnail: {fileID: 11400000, guid: d3ea98932c4de46408bf0d70c62571b2, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 0
+    RandomOdd: 0
+    ReputationRequirement: 0
   ItemRewards: []

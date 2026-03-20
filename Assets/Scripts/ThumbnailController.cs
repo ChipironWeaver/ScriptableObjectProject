@@ -28,8 +28,17 @@ public class ThumbnailController : MonoBehaviour
         _thumbnail.sprite = data.ThumbnailImage;
         _description.text = data.Description;
         reputation += choice.ReputationReward;
+        
+
+        if (choice.Behavior.HasFlag(SpecialBehaviour.ResetInventoryReputation))
+        {
+            reputation = 0;
+            ItemController.Instance.items = new List<ItemData>();
+            ItemController.Instance.ForceUpdate();
+        }
+        
         UpdateReputationText();
-            
+        
         if(choice.RequiredItem != null) foreach (ItemBehaviour item in choice.RequiredItem)
         {
             if (choice.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement) && ItemController.Instance.CheckIfItemExists(item.Item) && item.Consumable)

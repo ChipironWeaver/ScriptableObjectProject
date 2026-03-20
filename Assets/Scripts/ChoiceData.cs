@@ -29,5 +29,6 @@ public enum SpecialBehaviour
     ReputationRequirement = 8,
     Random = 16,
     OneItemRequirement = 32,
+    ResetInventoryReputation = 64,
 }
 

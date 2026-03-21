@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: OptainCoralReef
+  m_Name: CatchBigFishFaill
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: You have obtained a Coral Reef!
+  Description: 'You failed to catch the big fish '
   ChoiceData:
-  - Choice: Continue exploring the ocean
-    LinkedThumbnail: {fileID: 11400000, guid: f17bb3d3a07492d4e869c354e0cb3c2a, type: 2}
+  - Choice: You continue to explore the ocean towards a fish village
+    LinkedThumbnail: {fileID: 11400000, guid: d3ea98932c4de46408bf0d70c62571b2, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
     ReputationReward: 0
     RequiredItem: []
     Behavior: 0
     RandomOdd: 0
     ReputationRequirement: 0
-  ItemRewards:
-  - {fileID: 11400000, guid: 9e62929316715434fba50581003625be, type: 2}
+  ItemRewards: []

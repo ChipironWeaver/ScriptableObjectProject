@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
+  m_Name: GetGuidedToATemple
+  m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
+  ThumbnailImage: {fileID: 0}
+  Description: You are at a misterious temple, the is three circular slots...
+  ChoiceData:
+  - Choice: The Pearls allow you to open a secret door!
+    LinkedThumbnail: {fileID: 11400000, guid: 1856c31b12e8fd94e844a0d0e69f4ea5, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem:
+    - Item: {fileID: 11400000, guid: d9ddf9a8814e86449b3a32737b2390aa, type: 2}
+      Consumable: 1
+    - Item: {fileID: 11400000, guid: 72b87f09128d03d428da7d72e52f9f54, type: 2}
+      Consumable: 1
+    - Item: {fileID: 11400000, guid: 5e79f4693b833a04391cffb710330c22, type: 2}
+      Consumable: 1
+    Behavior: 2
+    RandomOdd: 0
+    ReputationRequirement: 0
+  - Choice: Nothing happens, the grumpy arrests you for wasting his time
+    LinkedThumbnail: {fileID: 11400000, guid: b6b04455aa400c94e9ed71fa1e916cb8, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem:
+    - Item: {fileID: 11400000, guid: d9ddf9a8814e86449b3a32737b2390aa, type: 2}
+      Consumable: 1
+    - Item: {fileID: 11400000, guid: 72b87f09128d03d428da7d72e52f9f54, type: 2}
+      Consumable: 1
+    - Item: {fileID: 11400000, guid: 5e79f4693b833a04391cffb710330c22, type: 2}
+      Consumable: 1
+    Behavior: 3
+    RandomOdd: 0
+    ReputationRequirement: 0
+  ItemRewards: []

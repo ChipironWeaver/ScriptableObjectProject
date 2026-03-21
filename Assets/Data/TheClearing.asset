@@ -13,6 +13,22 @@ MonoBehaviour:
   m_Name: TheClearing
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: 
-  ChoiceData: []
+  Description: 'You see a big fish in the distance, do you want to try to catch it? '
+  ChoiceData:
+  - Choice: Ignore the big fish and go towards the squid village
+    LinkedThumbnail: {fileID: 11400000, guid: d3ea98932c4de46408bf0d70c62571b2, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 0
+    RandomOdd: 0
+    ReputationRequirement: 0
+  - Choice: Try to catch the big fish
+    LinkedThumbnail: {fileID: 11400000, guid: 5013126360ed4cd4990b498c0bad2ba4, type: 2}
+    SecondLinkedThumbnail: {fileID: 11400000, guid: d4d5c4c2cde793945a13c3d8da0c2ca5, type: 2}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 16
+    RandomOdd: 0
+    ReputationRequirement: 75
   ItemRewards: []

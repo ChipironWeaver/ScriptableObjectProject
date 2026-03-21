@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DeeperInTheCave
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: 
+  Description: Do you want to try to explore the cave?
   ChoiceData:
   - Choice: Try to find your way in the cave
     LinkedThumbnail: {fileID: 11400000, guid: 635615b9964147d46b0363b588c43b59, type: 2}

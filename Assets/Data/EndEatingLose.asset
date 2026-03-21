@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: OptainCoralReef
+  m_Name: EndEatingLose
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: You have obtained a Coral Reef!
+  Description: You get eaten by a fish fish with the shiny thingy
   ChoiceData:
-  - Choice: Continue exploring the ocean
-    LinkedThumbnail: {fileID: 11400000, guid: f17bb3d3a07492d4e869c354e0cb3c2a, type: 2}
+  - Choice: Replay
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
     ReputationReward: 0
     RequiredItem: []
-    Behavior: 0
+    Behavior: 64
     RandomOdd: 0
     ReputationRequirement: 0
-  ItemRewards:
-  - {fileID: 11400000, guid: 9e62929316715434fba50581003625be, type: 2}
+  ItemRewards: []

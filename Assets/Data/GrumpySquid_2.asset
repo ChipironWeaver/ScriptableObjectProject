@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
+  m_Name: GrumpySquid_2
+  m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
+  ThumbnailImage: {fileID: 0}
+  Description: You decide to talk to the grumpy, let's hope the other villager like
+    you
+  ChoiceData:
+  - Choice: The other squides seem to like you so he allows you to become a new village!
+    LinkedThumbnail: {fileID: 11400000, guid: aec2d45ecb44d08429614ef1b5c3e129, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 10
+    RandomOdd: 0
+    ReputationRequirement: 40
+  - Choice: The other squides seem to like you, he ask you if you want to see a old
+      temple
+    LinkedThumbnail: {fileID: 11400000, guid: ead8b9bbbe12e00469fdabff3d3aae9d, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 10
+    RandomOdd: 0
+    ReputationRequirement: 40
+  - Choice: You are not liked by the other squids, you shall get arrested
+    LinkedThumbnail: {fileID: 11400000, guid: b6b04455aa400c94e9ed71fa1e916cb8, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 11
+    RandomOdd: 0
+    ReputationRequirement: 40
+  ItemRewards: []

@@ -13,6 +13,36 @@ MonoBehaviour:
   m_Name: FloweringKelpForest
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: 
-  ChoiceData: []
+  Description: You are in a flowering kelp forest, where do you want to go next
+  ChoiceData:
+  - Choice: Go towards a shiny thing(an other one(dj khaled))
+    LinkedThumbnail: {fileID: 11400000, guid: 9df6bf0035b891c489d5754d818d4c3b, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 0
+    RandomOdd: 0
+    ReputationRequirement: 0
+  - Choice: Go toward the quid village
+    LinkedThumbnail: {fileID: 11400000, guid: d3ea98932c4de46408bf0d70c62571b2, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 0
+    RandomOdd: 0
+    ReputationRequirement: 0
+  - Choice: The lights of the pearls shows you the way to a clearing
+    LinkedThumbnail: {fileID: 11400000, guid: c31d03c448be1294dbeccce09765aba1, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem:
+    - Item: {fileID: 11400000, guid: d9ddf9a8814e86449b3a32737b2390aa, type: 2}
+      Consumable: 0
+    - Item: {fileID: 11400000, guid: 5e79f4693b833a04391cffb710330c22, type: 2}
+      Consumable: 0
+    - Item: {fileID: 11400000, guid: 72b87f09128d03d428da7d72e52f9f54, type: 2}
+      Consumable: 0
+    Behavior: 2
+    RandomOdd: 0
+    ReputationRequirement: 0
   ItemRewards: []

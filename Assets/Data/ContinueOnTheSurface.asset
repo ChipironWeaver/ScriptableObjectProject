@@ -29,6 +29,6 @@ MonoBehaviour:
     ReputationReward: 0
     RequiredItem: []
     Behavior: 16
-    RandomOdd: 0
-    ReputationRequirement: 75
+    RandomOdd: 75
+    ReputationRequirement: 0
   ItemRewards: []

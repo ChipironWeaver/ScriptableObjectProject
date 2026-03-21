@@ -10,37 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
-  m_Name: SquidVillage
+  m_Name: FriendlySquidFish_2
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: You see a friedly squid, do you want to talk to them?
+  Description: Thank you so much for all of the fishes, please marry me!
   ChoiceData:
-  - Choice: Ignore the friendly squid.
+  - Choice: No fuck you!
     LinkedThumbnail: {fileID: 11400000, guid: 1b2354d0e09ca984491fda1f2dcb0c34, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
-    ReputationReward: -15
+    ReputationReward: 0
     RequiredItem:
     - Item: {fileID: 11400000, guid: 9e62929316715434fba50581003625be, type: 2}
       Consumable: 0
     Behavior: 3
     RandomOdd: 0
     ReputationRequirement: 0
-  - Choice: Ignore the friendly squid.
+  - Choice: No fuck you!
     LinkedThumbnail: {fileID: 11400000, guid: 42e71d9b3311c4942ae74199d1d6285c, type: 2}
     SecondLinkedThumbnail: {fileID: 0}
-    ReputationReward: -15
+    ReputationReward: 0
     RequiredItem:
     - Item: {fileID: 11400000, guid: 9e62929316715434fba50581003625be, type: 2}
       Consumable: 0
     Behavior: 2
-    RandomOdd: 0
-    ReputationRequirement: 0
-  - Choice: Talk to the friedly squid.
-    LinkedThumbnail: {fileID: 11400000, guid: 9c0f494df58413047ba647c6ead9330f, type: 2}
-    SecondLinkedThumbnail: {fileID: 0}
-    ReputationReward: 25
-    RequiredItem: []
-    Behavior: 0
     RandomOdd: 0
     ReputationRequirement: 0
   ItemRewards: []

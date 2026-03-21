@@ -13,5 +13,14 @@ MonoBehaviour:
   m_Name: YouGotLost
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
   ThumbnailImage: {fileID: 0}
-  Description: 
-  ChoiceData: []
+  Description: You got lost in the cave and ended up in a dead end!
+  ChoiceData:
+  - Choice: Trace back your steps
+    LinkedThumbnail: {fileID: 11400000, guid: a353960c6f0439045b5ff5923b127f2d, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 0
+    RandomOdd: 0
+    ReputationRequirement: 0
+  ItemRewards: []

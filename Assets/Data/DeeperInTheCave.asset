@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
+  m_Name: DeeperInTheCave
+  m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
+  ThumbnailImage: {fileID: 0}
+  Description: 
+  ChoiceData:
+  - Choice: Try to find your way in the cave
+    LinkedThumbnail: {fileID: 11400000, guid: 635615b9964147d46b0363b588c43b59, type: 2}
+    SecondLinkedThumbnail: {fileID: 11400000, guid: a4623bc3f7fecdf4e83f5c8b94e1fe8b, type: 2}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 16
+    RandomOdd: 50
+    ReputationRequirement: 0
+  - Choice: Go Back
+    LinkedThumbnail: {fileID: 11400000, guid: dab42ee502674ed478ce1a050e08d164, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 0
+    RandomOdd: 0
+    ReputationRequirement: 0
+  ItemRewards: []

@@ -30,5 +30,6 @@ public enum SpecialBehaviour
     Random = 16,
     OneItemRequirement = 32,
     ResetInventoryReputation = 64,
+    GoBackMainMenu = 128,
 }
 

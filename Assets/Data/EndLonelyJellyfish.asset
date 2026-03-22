@@ -23,4 +23,12 @@ MonoBehaviour:
     Behavior: 64
     RandomOdd: 0
     ReputationRequirement: 0
+  - Choice: Go back to the main menu
+    LinkedThumbnail: {fileID: 11400000, guid: 8e502ece3fc3e9149b206513366277fc, type: 2}
+    SecondLinkedThumbnail: {fileID: 0}
+    ReputationReward: 0
+    RequiredItem: []
+    Behavior: 128
+    RandomOdd: 0
+    ReputationRequirement: 0
   ItemRewards: []

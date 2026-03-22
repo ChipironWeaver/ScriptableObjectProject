@@ -15,6 +15,7 @@ public class ThumbnailController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _reputationText;
     [SerializeField] private Vector2 _reputationTextColorRange;
     [SerializeField] private Gradient _reputationGradient;
+    [SerializeField] private UISceneTransitionLoader _sceneTransitionLoader;
 
 
     public int reputation;
@@ -66,7 +67,9 @@ public class ThumbnailController : MonoBehaviour
             GameObject instantiated = Instantiate(_buttonPrefab, _choicePanelTransform);
             
             instantiated.GetComponentInChildren<TextMeshProUGUI>().text = choiceData.Choice;
-            instantiated.GetComponent<Button>().onClick.AddListener(() => { FindThumbnail(choiceData); });
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.GoBackMainMenu)) instantiated.GetComponent<Button>().onClick.AddListener(FadeOut);
+            
+            else instantiated.GetComponent<Button>().onClick.AddListener(() => {FindThumbnail(choiceData); });
             
             foreach (ItemBehaviour item in choiceData.RequiredItem)
             {
@@ -101,5 +104,11 @@ public class ThumbnailController : MonoBehaviour
     {
         _reputationText.text = reputation.ToString();
         _reputationText.color = _reputationGradient.Evaluate(Mathf.Clamp((reputation - _reputationTextColorRange.x)/(-_reputationTextColorRange.x + _reputationTextColorRange.y) , 0, 1));
+    }
+
+    private void FadeOut()
+    {
+        print("menu");
+        _sceneTransitionLoader.FadeOut("Main Menu");
     }
 }

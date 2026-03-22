@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: FriendlySquidFish_1
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
-  Description: 
+  ThumbnailImage: {fileID: 21300000, guid: b0708bec2d3f93f488537c4821833215, type: 3}
+  Description: OOOoooooOOOooohhhhh thank you for the fish you are so generouss
   ChoiceData:
   - Choice: Give the other fish to the squid!
     LinkedThumbnail: {fileID: 11400000, guid: 1b2354d0e09ca984491fda1f2dcb0c34, type: 2}

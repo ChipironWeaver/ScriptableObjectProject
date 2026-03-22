@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: IgnoreTheFish
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
+  ThumbnailImage: {fileID: 21300000, guid: fe6bfad9d4fbec140ab5104aa6aec38c, type: 3}
   Description: You have 3 ways to go, where do you decide to go?
   ChoiceData:
   - Choice: Towards the sea weed forest

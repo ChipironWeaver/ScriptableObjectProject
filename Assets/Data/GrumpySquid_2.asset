@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: GrumpySquid_2
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
+  ThumbnailImage: {fileID: 21300000, guid: 3a649c5f7f2424a429dbe32c97056986, type: 3}
   Description: You decide to talk to the grumpy, let's hope the other villager like
     you
   ChoiceData:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: EndEatingLose
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
+  ThumbnailImage: {fileID: 21300000, guid: 208ff1b95938f1a4eaa2d0c2f612d0ba, type: 3}
   Description: You get eaten by a fish fish with the shiny thingy
   ChoiceData:
   - Choice: Replay

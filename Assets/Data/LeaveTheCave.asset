@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: LeaveTheCave
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
+  ThumbnailImage: {fileID: 21300000, guid: d6cc2f0163797734795d1aacde5a96ce, type: 3}
   Description: 'You find yourself  '
   ChoiceData:
   - Choice: Go Deeper into the cave

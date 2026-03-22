@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: CatchBigFishSuccess
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
-  Description: 
+  ThumbnailImage: {fileID: 21300000, guid: 36a2e1bd69c901143bf158b511832be0, type: 3}
+  Description: You manage to catch the big fish!!
   ChoiceData:
   - Choice: You continue to explore the ocean towards a fish village
     LinkedThumbnail: {fileID: 11400000, guid: d3ea98932c4de46408bf0d70c62571b2, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81b71ab383da5543a60c095bb9675f9, type: 3}
   m_Name: OptainRedPearl
   m_EditorClassIdentifier: Assembly-CSharp::ThumbnailData
-  ThumbnailImage: {fileID: 0}
+  ThumbnailImage: {fileID: 21300000, guid: 62079c9800cad554e990f316b093a02b, type: 3}
   Description: You have found a red pearl!
   ChoiceData:
   - Choice: Continue towards the surface

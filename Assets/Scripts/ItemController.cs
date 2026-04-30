@@ -10,9 +10,6 @@ public class ItemController : MonoBehaviour
     public delegate void OnInventoryUpdate();
     public static event OnInventoryUpdate onInventoryUpdate;
     
-    public delegate void OnItemReward(ItemData item);
-    public static event OnItemReward onItemReward;
-    
     public static ItemController Instance { get; private set; }
     
     private void Awake()
@@ -36,7 +33,6 @@ public class ItemController : MonoBehaviour
         {
             items.Add(item);
             onInventoryUpdate?.Invoke();
-            onItemReward?.Invoke(item);
         }
     }
 

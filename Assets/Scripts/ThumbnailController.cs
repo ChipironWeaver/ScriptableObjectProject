@@ -40,18 +40,21 @@ public class ThumbnailController : MonoBehaviour
         
         UpdateReputationText();
         
-        if(choice.RequiredItem != null) foreach (ItemBehaviour item in choice.RequiredItem)
-        {
-            if (choice.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement) && ItemController.Instance.CheckIfItemExists(item.Item) && item.Consumable)
+        if(choice.RequiredItem != null) {
+            foreach (ItemBehaviour item in choice.RequiredItem)
             {
-                ItemController.Instance.RemoveItem(item.Item);
-                break;
+                if (choice.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement) && ItemController.Instance.CheckIfItemExists(item.Item) && item.Consumable)
+                {
+                    ItemController.Instance.RemoveItem(item.Item);
+                    break;
+                }
+            }
+            if (!choice.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement))
+            {
+                foreach (ItemBehaviour item in choice.RequiredItem) if(item.Consumable) ItemController.Instance.RemoveItem(item.Item);
             }
         }
-        if (!choice.Behavior.HasFlag(SpecialBehaviour.OneItemRequirement) && choice.RequiredItem != null)
-        {
-            foreach (ItemBehaviour item in choice.RequiredItem) if(item.Consumable) ItemController.Instance.RemoveItem(item.Item);
-        }
+        
         
         foreach (Transform child in _choicePanelTransform)
         {
@@ -67,8 +70,8 @@ public class ThumbnailController : MonoBehaviour
             GameObject instantiated = Instantiate(_buttonPrefab, _choicePanelTransform);
             
             instantiated.GetComponentInChildren<TextMeshProUGUI>().text = choiceData.Choice;
-            if (choiceData.Behavior.HasFlag(SpecialBehaviour.GoBackMainMenu)) instantiated.GetComponent<Button>().onClick.AddListener(FadeOut);
             
+            if (choiceData.Behavior.HasFlag(SpecialBehaviour.GoBackMainMenu)) instantiated.GetComponent<Button>().onClick.AddListener(FadeOut);
             else instantiated.GetComponent<Button>().onClick.AddListener(() => {FindThumbnail(choiceData); });
             
             foreach (ItemBehaviour item in choiceData.RequiredItem)
